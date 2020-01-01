@@ -29,9 +29,15 @@ pdfusetitle,plainpages=false]{hyperref}
 \KOMAoptions{toc=flat}
 
 \begin{document}
+
+%suppress the label:
+\def\LayoutTextField#1#2{% label, field
+  #2%
+}
+
 \vspace{-6cm}
 \title{\vspace{-2.0cm}Antrag auf Mitgliedschaft}
-\subtitle{im Verein "`Zentrum für Technikkultur Landau e. V."'}
+\subtitle{im Verein "`Zentrum für Technikkultur Landau e.\,V."'}
 \author{}
 \date{}
 
@@ -50,14 +56,15 @@ Weißquartierstraße 31\\
 oder eingescannt per Mail an \href{mailto:vorstand@ztl.space}{vorstand@ztl.space} mit dem Betreff "`Beitritt"'.\\
 
 \renewcommand{\arraystretch}{1.8}
+\begin{Form}
 \begin{tabularx}{\linewidth}{lX}\toprule
-	Organisation:						& \\ \midrule
-	Name: 								& \\ \midrule
-	Vorname: 							& \\ \midrule
-	Geburtsdatum: 						& \\ \midrule
-	Straße: 							& \\ \midrule
-	PLZ, Ort: 							& \\ \midrule
-	E-Mail:								& \\ 
+	Organisation:	& \TextField[width=14cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{namea} \\ \midrule
+	Name: 			& \TextField[width=14cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{nameb} \\ \midrule
+	Vorname: 		& \TextField[width=14cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{namec} \\ \midrule
+	Geburtsdatum: 	& \TextField[width=14cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{named} \\ \midrule
+	Straße: 		& \TextField[width=14cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{namee} \\ \midrule
+	PLZ, Ort: 		& \TextField[width=14cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{namef} \\ \midrule
+	E-Mail:			& \TextField[width=14cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{nameg} \\ 
 	\bottomrule
 \end{tabularx}
 
@@ -69,14 +76,21 @@ Bei Familien sind alle Namen und Geburtsdaten und ggf. E-Mail-Adressen anzugeben
 \vspace{0.5cm}
 
 \begin{tabularx}{\linewidth}{lX}
-	Art der Mitgliedschaft : 	& $\Box$ Ordentliche Mitgliedschaft \newline (20\euro/Monat)\\
-								& $\Box$ Familienmitgliedschaft {\tiny 2 Erwachsene und max. 3 Kinder unter 18 Jahre}  \newline (30\euro/Monat)\\
-								& $\Box$ Mitgliedschaft mit reduziertem Beitrag {\tiny Schüler, Studenten und Auszubildende}  \newline (10\euro/Monat)\\
-								& $\Box$ Doppelmitgliedschaft MEC {\tiny bei bestehender Mitgliedschaft im MEC Landau e. V.} \newline (10\euro/Monat)\\
-								& $\Box$ Doppelmitgliedschaft Funkamateure {\tiny bei bestehender Mitgliedschaft im DARC e. V. Ortsverband Landau - K14} \newline (10\euro/Monat)\\
-								& $\Box$ Fördermitgliedschaft {\tiny ohne Stimmrecht in der Mitgliederversammlung} \newline Betrag: \rule{3cm}{.4pt}\euro/Monat\\\\
+	Art der Mitgliedschaft : 	& 	\CheckBox[name=ord, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{} 
+									Ordentliche Mitgliedschaft \newline (20\euro/Monat)\\
+								& 	\CheckBox[name=fam, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{} 
+									Familienmitgliedschaft {\tiny 2 Erwachsene und max. 3 Kinder unter 18 Jahre}  \newline (30\euro/Monat)\\
+								& 	\CheckBox[name=red, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{} 
+									Mitgliedschaft mit reduziertem Beitrag {\tiny Schüler, Studenten und Auszubildende}  \newline (10\euro/Monat)\\
+								& 	\CheckBox[name=mec, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{} 
+									Doppelmitgliedschaft MEC {\tiny bei bestehender Mitgliedschaft im MEC Landau e. V.} \newline (10\euro/Monat)\\
+								& 	\CheckBox[name=k14, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{} 
+									Doppelmitgliedschaft Funkamateure {\tiny bei bestehender Mitgliedschaft im DARC e. V. Ortsverband Landau - K14} \newline (10\euro/Monat)\\
+								& 	\CheckBox[name=foe, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{} 
+									Fördermitgliedschaft {\tiny ohne Stimmrecht in der Mitgliederversammlung} 
+									\newline Betrag: \TextField[width=3cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{betrag}\euro/Monat\\\\
 \end{tabularx}
-
+\end{Form}
 Fördermitglieder mit einem Beitrag ab 50\euro/Monat werden auf unserer Website aufgeführt. \\
 Bei einem Beitrag ab 100\euro/Monat wird zusätzlich ein Schild an unserer Sponsorenwand installiert.
 
@@ -91,6 +105,7 @@ Ich bin mit der Erhebung, Verarbeitung und Nutzung folgender personenbezogener D
 Hiermit beantrage ich die Aufnahme in den Verein "`Zentrum für Technikkultur Landau e. V."'. Für meine Mitgliedschaft gilt die aktuelle Satzung des Vereins wie sie unter \url{https://ztl.space/die-satzung/} veröffentlicht wurde.\\
 
 \vspace{50pt}
+\TextField[width=5cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{nameh}\\
 \noindent\rule{5cm}{.4pt}\hfill\rule{5cm}{.4pt}\par
 \noindent Datum, Ort \hspace{9.8cm} Unterschrift
 \vspace{50pt}
