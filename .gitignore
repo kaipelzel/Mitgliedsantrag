@@ -263,3 +263,9 @@ TSWLatexianTemp*
 
 # PDF releases
 Release/*
+
+# Visual Studio Code
+.vscode
+
+# MacOS hidden directories/files
+.DS_Store
