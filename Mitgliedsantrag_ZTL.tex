@@ -57,13 +57,13 @@ oder eingescannt per Mail an \href{mailto:vorstand@ztl.space}{vorstand@ztl.space
 \renewcommand{\arraystretch}{1.8}
 \begin{Form}
 \begin{tabularx}{\linewidth}{lX}\toprule
-	Organisation:	& \TextField[width=14cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{namea} \\ \midrule
-	Name: 			& \TextField[width=14cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{nameb} \\ \midrule
-	Vorname: 		& \TextField[width=14cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{namec} \\ \midrule
-	Geburtsdatum: 	& \TextField[width=14cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{named} \\ \midrule
-	Straße: 		& \TextField[width=14cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{namee} \\ \midrule
-	PLZ, Ort: 		& \TextField[width=14cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{namef} \\ \midrule
-	E-Mail:			& \TextField[width=14cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{nameg} \\ 
+	Organisation:	& \TextField[width=12.7cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{namea} \\ \midrule
+	Name: 			& \TextField[width=12.7cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{nameb} \\ \midrule
+	Vorname: 		& \TextField[width=12.7cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{namec} \\ \midrule
+	Geburtsdatum: 	& \TextField[width=12.7cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{named} \\ \midrule
+	Straße, Hausnummer: 		& \TextField[width=12.7cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{namee} \\ \midrule
+	PLZ, Ort: 		& \TextField[width=12.7cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{namef} \\ \midrule
+	E-Mail:			& \TextField[width=12.7cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{nameg} \\ 
 	\bottomrule
 \end{tabularx}
 
@@ -75,25 +75,23 @@ Das Feld Geburtsdatum kann entfallen. Bei Familien sind alle Namen und Geburtsda
 \vspace{0.5cm}
 
 \begin{tabularx}{\linewidth}{lX}
-	Art der Mitgliedschaft : 	& 	\CheckBox[name=ord, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{} 
-									Ordentliche Mitgliedschaft \newline (20\euro/Monat)\\
-								& 	\CheckBox[name=fam, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{} 
-									Familienmitgliedschaft {\tiny 2 Erwachsene und max. 3 Kinder unter 18 Jahre}  \newline (30\euro/Monat)\\
-								& 	\CheckBox[name=red, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{} 
-									Mitgliedschaft mit reduziertem Beitrag {\tiny Schüler, Studenten und Auszubildende}  \newline (10\euro/Monat)\\
+	Art der Mitgliedschaft : 	& 	\CheckBox[name=ord, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{}
+									 Ordentliche Mitgliedschaft \newline (20\euro/Monat)\\
+								& 	\CheckBox[name=fam, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{}
+									Familienmitgliedschaft{\tiny 2 Erwachsene und max. 3 Kinder unter 18 Jahre} \newline (30\euro/Monat)\\
+								& 	\CheckBox[name=red, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{}
+									Mitgliedschaft mit reduziertem Beitrag {\tiny Schüler, Studenten und Auszubildende} \newline (10\euro/Monat)\\
 								& 	\CheckBox[name=k14, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{} 
 									Doppelmitgliedschaft Funkamateure {\tiny bei bestehender Mitgliedschaft im DARC e. V. Ortsverband Landau - K14} \newline (10\euro/Monat)\\
 								& 	\CheckBox[name=sch, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{} 
-									Schulmitgliedschaft {\tiny mit Stimmrecht in der Mitgliederversammlung} 
-									\newline Betrag: (50\euro/Monat)\\
-								& 	\CheckBox[name=foe, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{} 
-									Fördermitgliedschaft {\tiny ohne Stimmrecht in der Mitgliederversammlung} 
-									\newline Betrag: \TextField[width=3cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{betrag}\euro/Monat\\\\
+									Schulmitgliedschaft {\tiny mit Stimmrecht in der Mitgliederversammlung} \newline Betrag: (50\euro/Monat) \\
+								& 	\CheckBox[name=foe, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{}
+									Fördermitgliedschaft {\tiny ohne Stimmrecht in der Mitgliederversammlung}\newline Betrag: \TextField[width=3cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{betrag}\euro/Monat\\\\
 
 \end{tabularx}
 \end{Form}
 Fördermitglieder mit einem Beitrag ab 50\euro/Monat werden auf unserer Website aufgeführt. \\
-Bei einem Beitrag ab 100\euro/Monat wird zusätzlich ein Schild an unserer Sponsorenwand installiert.
+Bei einem Beitrag ab 100\euro/Monat wird zusätzlich ein Schild an unserer Wand der Förderer installiert.
 
 \newpage
 
