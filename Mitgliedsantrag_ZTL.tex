@@ -7,8 +7,9 @@ pdfusetitle,plainpages=false]{hyperref}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[ngerman]{babel}
-\usepackage{booktabs}
+\usepackage{booktabs} % Professionelle Tabellen
 \usepackage{tabularx}
+\usepackage{makecell} % Erlaubt Zeilenumbrüche in Tabellenzellen
 \usepackage{amssymb}
 \usepackage{eurosym}
 
@@ -74,19 +75,17 @@ Bei Familien sind alle Namen und Geburtsdaten und ggf. E-Mail-Adressen anzugeben
 
 \vspace{0.5cm}
 
-\begin{tabularx}{\linewidth}{lX}
-	Art der Mitgliedschaft : 	& 	\CheckBox[name=ord, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{}
-									 Ordentliche Mitgliedschaft \newline (20\euro/Monat)\\
-								& 	\CheckBox[name=fam, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{}
-									Familienmitgliedschaft {\tiny 2 Erwachsene und max. 3 Kinder unter 18 Jahre} \newline (30\euro/Monat)\\
-								& 	\CheckBox[name=red, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{}
-									Mitgliedschaft mit reduziertem Beitrag {\tiny Schüler, Studenten und Auszubildende} \newline (10\euro/Monat)\\
-								& 	\CheckBox[name=k14, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{} 
-									Doppelmitgliedschaft Funkamateure {\tiny bei bestehender Mitgliedschaft im DARC e. V. Ortsverband Landau - K14} \newline (10\euro/Monat)\\
-								& 	\CheckBox[name=sch, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{} 
-									Schulmitgliedschaft {\tiny mit Stimmrecht in der Mitgliederversammlung} \newline Betrag: (50\euro/Monat) \\
-								& 	\CheckBox[name=foe, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{}
-									Fördermitgliedschaft {\tiny ohne Stimmrecht in der Mitgliederversammlung}\newline Betrag: \TextField[width=3cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{betrag}\euro/Monat\\\\
+\begin{tabularx}{\linewidth}{lcX}
+	Art der Mitgliedschaft : 	& \makecell{\CheckBox[name=ord, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{}} & 
+									Ordentliche Mitgliedschaft (20\euro/Monat)\\[2ex]
+								& \makecell{\CheckBox[name=fam, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{}} & 
+									\parbox{10cm}{Familienmitgliedschaft (30\euro/Monat) \\ {\tiny 2 Erwachsene und max. 3 Kinder unter 21 Jahre}}\\[2ex]
+								& \makecell{\CheckBox[name=red, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{}} & 
+									\parbox{10cm}{Mitgliedschaft mit reduziertem Beitrag (10\euro/Monat) \\ {\tiny Schüler, Studenten und Auszubildende} }\\[2ex]
+								& \makecell{\CheckBox[name=sch, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{}} & 
+									\parbox{10cm}{Schulmitgliedschaft (50\euro/Monat) \\ {\tiny mit Stimmrecht in der Mitgliederversammlung} }\\[2ex]
+								& \makecell{\CheckBox[name=foe, width=0.6cm, height=0.6cm, bordercolor=0 0 0]{}} & 
+									\parbox{10cm}{Fördermitgliedschaft (\TextField[width=3cm, bordercolor=1 1 1, backgroundcolor=0.98 0.98 0.98]{betrag}\euro/Monat) \\ {\tiny ohne Stimmrecht in der Mitgliederversammlung}}\\[2ex]
 
 \end{tabularx}
 \end{Form}
